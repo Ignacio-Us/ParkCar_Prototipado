@@ -1,0 +1,172 @@
+[
+  {
+    "id": "sector-a",
+    "name": "Sector A - Aula Magna/Canchas",
+    "coords": [
+      -38.746047947219076,
+      -72.61874472544525
+    ],
+    "parkings": [
+      {
+        "id": "s-a-1",
+        "name": "Aula Magna UFRO",
+        "totalSpaces": 100,
+        "imageUrl": "./src/assets/Ufro_Aula_Magna.jpg",
+        "coords": [
+          -38.74526486399631,
+          -72.61729191828437
+        ]
+      },
+      {
+        "id": "s-a-2",
+        "name": "Canchas UFRO",
+        "totalSpaces": 130,
+        "imageUrl": "./src/assets/Ufro_Aula_Magna.jpg",
+        "coords": [
+          -38.746149671404844,
+          -72.62067759154661
+        ]
+      },
+      {
+        "id": "s-a-3",
+        "name": "Gimnasio Olimpico UFRO",
+        "totalSpaces": 108,
+        "imageUrl": "./src/assets/Ufro_Aula_Magna.jpg",
+        "coords": [
+          -38.74646278322948,
+          -72.61778885926472
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sector-b",
+    "name": "Sector B - DIFEM/DIFTO",
+    "coords": [
+      -38.74723199702763,
+      -72.6170657202482
+    ],
+    "parkings": [
+      {
+        "id": "s-b-1",
+        "name": "DIFTO/DIFEM",
+        "totalSpaces": 100,
+        "imageUrl": "./src/assets/Ufro_Aula_Magna.jpg",
+        "coords": [
+          -38.74700971528628,
+          -72.61708665112006
+        ]
+      },
+      {
+        "id": "s-b-2",
+        "name": "Lateral DDE",
+        "totalSpaces": 130,
+        "imageUrl": "./src/assets/Ufro_Aula_Magna.jpg",
+        "coords": [
+          -38.74656204711082,
+          -72.61638391238066
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sector-c",
+    "name": "Sector C - Ingenierias",
+    "coords": [
+      -38.745863644924476,
+      -72.61508075418975
+    ],
+    "parkings": [
+      {
+        "id": "s-c-1",
+        "name": "Dep. Ingenieria Mecanica",
+        "totalSpaces": 100,
+        "imageUrl": "./src/assets/Ufro_Aula_Magna.jpg",
+        "coords": [
+          -38.74593243519928,
+          -72.61420310234114
+        ]
+      },
+      {
+        "id": "s-c-2",
+        "name": "Dep. Ciencias Fisicas",
+        "totalSpaces": 130,
+        "imageUrl": "./src/assets/Ufro_Aula_Magna.jpg",
+        "coords": [
+          -38.74575671266454,
+          -72.61497826073546
+        ]
+      },
+      {
+        "id": "s-c-3",
+        "name": "Direccion de Registro Academico Estudiantil",
+        "totalSpaces": 108,
+        "imageUrl": "./src/assets/Ufro_Aula_Magna.jpg",
+        "coords": [
+          -38.745491769281536,
+          -72.61588822632615
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sector-d",
+    "name": "Sector D - Frontis Campus",
+    "coords": [
+      -38.74891,
+      -72.61477
+    ],
+    "parkings": [
+      {
+        "id": "s-d-1",
+        "name": "Frontis Campus",
+        "totalSpaces": 100,
+        "imageUrl": "./src/assets/Ufro_Aula_Magna.jpg",
+        "coords": [
+          -38.74883591154339,
+          -72.61479516191065
+        ]
+      },
+      {
+        "id": "s-d-2",
+        "name": "FECSH",
+        "totalSpaces": 130,
+        "imageUrl": "./src/assets/Ufro_Aula_Magna.jpg",
+        "coords": [
+          -38.7495050789383,
+          -72.61572079008333
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sector-e",
+    "name": "Sector E - Agro/Pedagogia",
+    "coords": [
+      -38.74985019697644,
+      -72.6173266635881
+    ],
+    "parkings": [
+      {
+        "id": "s-e-1",
+        "name": "Agropecuaria",
+        "totalSpaces": 100,
+        "imageUrl": "./src/assets/Ufro_Aula_Magna.jpg",
+        "coords": [
+          -38.750172661705605,
+          -72.61739675841339
+        ]
+      },
+      {
+        "id": "s-e-2",
+        "name": "Morfologia",
+        "totalSpaces": 130,
+        "imageUrl": "./src/assets/Ufro_Aula_Magna.jpg",
+        "coords": [
+          -38.749157132137576,
+          -72.61786305523009
+        ]
+      }
+    ]
+  }
+]
