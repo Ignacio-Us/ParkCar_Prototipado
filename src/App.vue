@@ -29,11 +29,11 @@
 
       <div class="flex flex-wrap justify-center gap-4 mb-8">
         <button @click="simulateInside"
-          class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition-all duration-200 ease-in-out transform hover:scale-105">
+          class="px-6 py-3 bg-indigo-600 active:bg-indigo-700 text-white font-semibold rounded-lg shadow-md transition-all duration-200 ease-in-out transform active:scale-105">
           Simular Dentro del Campus
         </button>
         <button @click="simulateOutside"
-          class="px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md transition-all duration-200 ease-in-out transform hover:scale-105">
+          class="px-6 py-3 bg-red-600 active:bg-red-700 text-white font-semibold rounded-lg shadow-md transition-all duration-200 ease-in-out transform active:scale-105">
           Simular Fuera del Campus
         </button>
       </div>
@@ -79,14 +79,14 @@
             <h3 class="text-lg sm:text-xl font-bold text-gray-700 mb-4 text-center">Estacionamientos disponibles:</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div v-for="parking in selectedSector.parkings" :key="parking.id"
-                class="flex items-center bg-black rounded-lg shadow-md p-4 border border-gray-200 cursor-pointer hover:bg-gray-800 transition-colors"
+                class="flex items-center bg-black rounded-lg shadow-md p-4 border border-gray-200 cursor-pointer active:bg-gray-800 transition-colors"
                 @click="goToParkingDetail(parking.id)">
 
                 <div>
                   <h4 class="text-m sm:text-lg font-semibold text-white">{{ parking.name }}</h4>
                   <p class="text-white text-sm sm:text-m">Espacios disponibles:
                     <span
-                      :class="{ 'font-bold': true, 'text-[#47B947]': parking.availableSpaces > 50, 'text-[#FF6F00]': parking.availableSpaces <= 50 && parking.availableSpaces > 15, 'text-[#FF0315]': parking.availableSpaces <= 15 }">
+                      :class="{ 'font-bold': true, 'text-[#47B947]': parking.availableSpaces > 10, 'text-[#FF6F00]': parking.availableSpaces <= 10 && parking.availableSpaces > 6, 'text-[#FF0315]': parking.availableSpaces <= 6 }">
                       {{ parking.availableSpaces }} / {{ parking.totalSpaces }}
                     </span>
                   </p>
@@ -95,7 +95,7 @@
               </div>
             </div>
             <button @click="goToCampusView"
-              class="mb-4 mt-4 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-md transition-colors">
+              class="mb-4 mt-4 px-4 py-2 bg-blue-500 active:bg-blue-600 text-white font-semibold rounded-lg shadow-md transition-colors">
               ← Volver a Vista General
             </button>
           </section>
@@ -119,7 +119,7 @@
             <div class="absolute top-2 left-2 flex flex-wrap gap-1 z-10 justify-start">
               <div v-for="space in selectedParking.spaces.filter(s => s.row === 'left')" :key="space.id" :class="[
                 'w-8 h-8 sm:w-20 sm:h-20 flex items-center justify-center rounded-sm border-2 transform rotate-90 transition-all duration-100',
-                space.isOccupied ? 'bg-red-400 border-red-600 cursor-not-allowed' : 'bg-gray-200 border-gray-400 cursor-pointer hover:bg-gray-300',
+                space.isOccupied ? 'bg-red-400 border-red-600 cursor-not-allowed' : 'bg-gray-200 border-gray-400 cursor-pointer active:bg-gray-300',
                 { 'bg-green-600 !border-green-800': selectedSpaceId === space.id } // Clase para destacar
               ]" :title="space.isOccupied ? 'Ocupado' : 'Disponible'" @click="selectSpace(space)">
               </div>
@@ -129,7 +129,7 @@
               class="absolute top-2 left-7/8 -translate-x-1/2 flex flex-col gap-1 z-10 justify-center h-[calc(100%-16px)]">
               <div v-for="space in selectedParking.spaces.filter(s => s.row === 'center')" :key="space.id" :class="[
                 'w-8 h-6 sm:w-20 sm:h-20 flex items-center justify-center rounded-sm border-2 transition-all duration-100',
-                space.isOccupied ? 'bg-red-400 border-red-600 cursor-not-allowed' : 'bg-gray-200 border-gray-400 cursor-pointer hover:bg-gray-300',
+                space.isOccupied ? 'bg-red-400 border-red-600 cursor-not-allowed' : 'bg-gray-200 border-gray-400 cursor-pointer active:bg-gray-300',
                 { 'bg-green-600 !border-green-800': selectedSpaceId === space.id } // Clase para destacar
               ]" :title="space.isOccupied ? 'Ocupado' : 'Disponible'" @click="selectSpace(space)"></div>
             </div>
@@ -137,7 +137,7 @@
             <div class="absolute bottom-1 sm:bottom-3 left-2 flex flex-wrap gap-1 z-10 justify-start">
               <div v-for="space in selectedParking.spaces.filter(s => s.row === 'bottom')" :key="space.id" :class="[
                 'w-8 h-8 sm:w-20 sm:h-20 flex items-center justify-center rounded-sm border-2 transform rotate-90 transition-all duration-100',
-                space.isOccupied ? 'bg-red-400 border-red-600 cursor-not-allowed' : 'bg-gray-200 border-gray-400 cursor-pointer hover:bg-gray-300',
+                space.isOccupied ? 'bg-red-400 border-red-600 cursor-not-allowed' : 'bg-gray-200 border-gray-400 cursor-pointer active:bg-gray-300',
                 { 'bg-green-600 !border-green-800': selectedSpaceId === space.id } // Clase para destacar
               ]" :title="space.isOccupied ? 'Ocupado' : 'Disponible'" @click="selectSpace(space)">
               </div>
@@ -147,13 +147,13 @@
 
           <div class="flex justify-center gap-4 mt-6">
             <button @click="backToSectorDetail"
-              class="px-4 py-2 bg-red-800 hover:bg-red-700 text-white font-semibold rounded-lg shadow-md transition-colors">
+              class="px-4 py-2 bg-red-800 active:bg-red-700 text-white font-semibold rounded-lg shadow-md transition-colors">
               ← Volver al Sector
             </button>
 
             <button @click="handleContinue" :disabled="!selectedSpaceId" :class="[
               'px-6 py-3 font-semibold rounded-lg shadow-md transition-all duration-200 ease-in-out',
-              selectedSpaceId ? 'bg-gray-700 hover:bg-gray-600 text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+              selectedSpaceId ? 'bg-gray-700 active:bg-gray-600 text-white' : 'bg-gray-300 text-gray-500 cursor-not-allowed'
             ]">
               Continuar →
             </button>
